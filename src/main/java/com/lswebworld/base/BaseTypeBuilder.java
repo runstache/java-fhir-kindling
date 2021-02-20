@@ -5,9 +5,12 @@ import org.hl7.fhir.r4.model.Type;
 
 public abstract class BaseTypeBuilder<T extends Type> {
   
-  private T type;
+  private Type type;
 
-  protected BaseTypeBuilder(T type) {
+  protected BaseTypeBuilder() {    
+  }
+
+  protected void setType(Type type) {
     this.type = type;
   }
 
