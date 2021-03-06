@@ -33,13 +33,5 @@ public abstract class AbstractElementBuilder<T extends Element, U> {
   public U addExtension(Extension extension) {
     element.addExtension(extension);
     return (U) this;
-  }  
-
-  /**
-   * Builds the Element and returns it.
-   * @return Element.
-   */
-  public T build() {
-    return this.element;
   }
 }
