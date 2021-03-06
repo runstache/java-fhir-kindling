@@ -68,7 +68,7 @@ public class ContactPointBuilder {
 
   /**
    * Returns the constructed Contact Point.
-   * @return
+   * @return Contact Point
    */
   public ContactPoint build() {
     return this.contactPoint;
