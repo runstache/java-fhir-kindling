@@ -3,15 +3,19 @@ package com.lswebworld.datatypes;
 import org.hl7.fhir.r4.model.Quantity;
 import org.hl7.fhir.r4.model.Quantity.QuantityComparator;
 
-public abstract class AbstractQuantityBuilder<T extends Quantity> {
+public abstract class AbstractQuantityBuilder<T extends Quantity> 
+    extends AbstractElementBuilder<T, AbstractQuantityBuilder<T>> {
 
   private T quantity;
 
   /**
    * Constructor.
+   * @param quantity Initial Quantity Type.
    */
   protected AbstractQuantityBuilder(T quantity) {
+    super();
     this.quantity = quantity;
+    super.initialize(quantity);
   }
 
   /**
@@ -25,7 +29,7 @@ public abstract class AbstractQuantityBuilder<T extends Quantity> {
   }
 
   /**
-   * Sets the Comparator on the Quantity (>, <, >=, <=, =).
+   * Sets the Comparator on the Quantity (&gt;, &lt;, &gt;=, &lt;=, =).
    * @param comparator Comparator
    * @return QuantityBuilder
    */

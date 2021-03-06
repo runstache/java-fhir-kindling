@@ -5,7 +5,7 @@ import org.hl7.fhir.r4.model.Address.AddressType;
 import org.hl7.fhir.r4.model.Address.AddressUse;
 import org.hl7.fhir.r4.model.Period;
 
-public class AddressBuilder {
+public class AddressBuilder extends AbstractElementBuilder<Address, AddressBuilder> {
   
   private Address address;
 
@@ -13,7 +13,9 @@ public class AddressBuilder {
    * Constructor.
    */
   public AddressBuilder() {
+    super();
     this.address = new Address();
+    super.initialize(address);
   }
 
   /**

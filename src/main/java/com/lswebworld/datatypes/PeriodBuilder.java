@@ -5,7 +5,7 @@ import java.time.ZoneOffset;
 import java.util.Date;
 import org.hl7.fhir.r4.model.Period;
 
-public class PeriodBuilder {
+public class PeriodBuilder extends AbstractElementBuilder<Period, PeriodBuilder> {
 
   private Period period;
 
@@ -13,7 +13,9 @@ public class PeriodBuilder {
    * Constructor.
    */
   public PeriodBuilder() {
+    super();
     this.period = new Period();
+    super.initialize(period);
   }
 
   /**

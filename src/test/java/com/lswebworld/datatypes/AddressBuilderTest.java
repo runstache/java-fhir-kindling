@@ -6,6 +6,7 @@ import java.util.Date;
 import org.hl7.fhir.r4.model.Address;
 import org.hl7.fhir.r4.model.Address.AddressType;
 import org.hl7.fhir.r4.model.Address.AddressUse;
+import org.hl7.fhir.r4.model.Extension;
 import org.hl7.fhir.r4.model.Period;
 import org.hl7.fhir.r4.model.StringType;
 import org.junit.jupiter.api.Test;
@@ -120,6 +121,37 @@ class AddressBuilderTest {
         .as("Period should not be empty")
         .isFalse();
         
+  }
+
+  @Test
+  void testWithId() {
+    Address address = new AddressBuilder()
+        .withId("MyID")
+        .build();
+  
+    assertThat(address.getId())
+        .as("Id should be MyID")
+        .isEqualToIgnoringCase("MyID");
+        
+  }
+
+  @Test
+  void testAddExtension() {
+    Extension extension = new Extension("http://www.myextension.com");
+    extension.setValue(new StringType("MyValue"));
+
+    Address address = new AddressBuilder()
+        .addExtension(extension)
+        .build();
+    assertThat(address.getExtension())
+        .as("Extension should be set with correct values")
+        .isNotEmpty()
+        .allSatisfy(ext -> {
+          assertThat(ext.getUrl()).isEqualToIgnoringCase("http://www.myextension.com");
+          StringType value = (StringType) ext.getValue();          
+          assertThat(value.getValueAsString()).isEqualToIgnoringCase("MyValue");
+        });
+
   }
   
 }

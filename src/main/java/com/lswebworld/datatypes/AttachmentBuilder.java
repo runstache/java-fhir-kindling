@@ -4,9 +4,8 @@ import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 import java.util.Date;
 import org.hl7.fhir.r4.model.Attachment;
-import org.hl7.fhir.r4.model.Extension;
 
-public class AttachmentBuilder {
+public class AttachmentBuilder extends AbstractElementBuilder<Attachment, AttachmentBuilder> {
 
   private Attachment attachment;
 
@@ -14,28 +13,10 @@ public class AttachmentBuilder {
    * Constructor.
    */
   public AttachmentBuilder() {
+    super();
     attachment = new Attachment();    
+    super.initialize(attachment);
   }  
-
-  /**
-   * Sets the Id of the Attachment.
-   * @param id Attachment Id
-   * @return AttachmentBuilder
-   */
-  public AttachmentBuilder withId(String id) {
-    attachment.setId(id);
-    return this;
-  }
-
-  /**
-   * Adds an Extension to the Attachment.
-   * @param extension Extension.
-   * @return AttachmentBuilder
-   */
-  public AttachmentBuilder addExtenstion(Extension extension) {
-    attachment.addExtension(extension);
-    return this;
-  }
 
   /**
    * Sets the Mime Type.

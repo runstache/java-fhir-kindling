@@ -3,7 +3,7 @@ package com.lswebworld.datatypes;
 import org.hl7.fhir.r4.model.Quantity;
 import org.hl7.fhir.r4.model.Ratio;
 
-public class RatioBuilder {
+public class RatioBuilder extends AbstractElementBuilder<Ratio, RatioBuilder> {
 
   private Ratio ratio;
 
@@ -11,7 +11,9 @@ public class RatioBuilder {
    * Constructor.
    */
   public RatioBuilder() {
+    super();
     this.ratio = new Ratio();
+    super.initialize(ratio);
   }
 
   /**

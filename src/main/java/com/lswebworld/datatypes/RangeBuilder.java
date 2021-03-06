@@ -3,7 +3,7 @@ package com.lswebworld.datatypes;
 import org.hl7.fhir.r4.model.Range;
 import org.hl7.fhir.r4.model.SimpleQuantity;
 
-public class RangeBuilder {
+public class RangeBuilder extends AbstractElementBuilder<Range, RangeBuilder> {
 
   private Range range;
 
@@ -11,7 +11,9 @@ public class RangeBuilder {
    * Constructor.
    */
   public RangeBuilder() {
+    super();
     this.range = new Range();
+    super.initialize(range);
   }
 
   /**

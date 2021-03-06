@@ -5,7 +5,7 @@ import org.hl7.fhir.r4.model.ContactPoint.ContactPointSystem;
 import org.hl7.fhir.r4.model.ContactPoint.ContactPointUse;
 import org.hl7.fhir.r4.model.Period;
 
-public class ContactPointBuilder {
+public class ContactPointBuilder extends AbstractElementBuilder<ContactPoint, ContactPointBuilder> {
 
   private ContactPoint contactPoint;
 
@@ -13,7 +13,9 @@ public class ContactPointBuilder {
    * Constructor.
    */
   public ContactPointBuilder() {
+    super();
     contactPoint = new ContactPoint();
+    super.initialize(contactPoint);
   }
 
   /**
