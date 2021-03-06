@@ -1,38 +1,22 @@
 package com.lswebworld.datatypes;
 
 import org.hl7.fhir.r4.model.CodeableConcept;
-import org.hl7.fhir.r4.model.Extension;
 import org.hl7.fhir.r4.model.Identifier;
 import org.hl7.fhir.r4.model.Identifier.IdentifierUse;
 import org.hl7.fhir.r4.model.Period;
 import org.hl7.fhir.r4.model.Reference;
 
-public class IdentifierBuilder {
+public class IdentifierBuilder extends AbstractElementBuilder<Identifier, IdentifierBuilder> {
 
   private Identifier identifier;
 
+  /**
+   * Constructor.
+   */
   public IdentifierBuilder() {
+    super();
     this.identifier = new Identifier();
-  }
-
-  /**
-   * Sets the Identifier Id to the provide value.
-   * @param id Id
-   * @return IdentifierBuilder
-   */
-  public IdentifierBuilder withId(String id) {
-    identifier.setId(id);
-    return this;
-  }
-
-  /**
-   * Adds an Extension to the Identifier.
-   * @param extension Extension
-   * @return IdentifierBuilder
-   */
-  public IdentifierBuilder addExtension(Extension extension) {
-    identifier.addExtension(extension);
-    return this;
+    super.initialize(identifier);
   }
 
   /**

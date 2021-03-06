@@ -14,7 +14,7 @@ import org.junit.jupiter.api.Test;
 class AttachmentBuilderTest {
 
   @Test
-  void testSetId() {
+  void testWithId() {
     Attachment attachment = new AttachmentBuilder()
         .withId("MyId")
         .build();
@@ -27,7 +27,7 @@ class AttachmentBuilderTest {
     extension.setValue(new StringType("MyValue"));
 
     Attachment attachment = new AttachmentBuilder()
-        .addExtenstion(extension)
+        .addExtension(extension)
         .build();
     assertThat(attachment.getExtension()).as("Extensions should not be empty").isNotEmpty();
     assertThat(attachment.getExtension())
@@ -141,7 +141,5 @@ class AttachmentBuilderTest {
     assertThat(attachment.getCreation().getTime())
         .as("Creation should be 1/15/2020")
         .isEqualTo(dts.toEpochSecond(ZoneOffset.UTC));
-  }
-
-  
+  }  
 }

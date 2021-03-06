@@ -3,12 +3,17 @@ package com.lswebworld.datatypes;
 import org.hl7.fhir.r4.model.HumanName;
 import org.hl7.fhir.r4.model.Period;
 
-public class HumanNameBuilder {
+public class HumanNameBuilder extends AbstractElementBuilder<HumanName, HumanNameBuilder> {
 
   private HumanName name;
 
+  /**
+   * Constructor.
+   */
   public HumanNameBuilder() {
+    super();
     name = new HumanName();
+    super.initialize(name);
   }
   
   /**
