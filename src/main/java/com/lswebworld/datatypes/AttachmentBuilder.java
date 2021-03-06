@@ -30,7 +30,7 @@ public class AttachmentBuilder {
   /**
    * Adds an Extension to the Attachment.
    * @param extension Extension.
-   * @return
+   * @return AttachmentBuilder
    */
   public AttachmentBuilder addExtenstion(Extension extension) {
     attachment.addExtension(extension);
