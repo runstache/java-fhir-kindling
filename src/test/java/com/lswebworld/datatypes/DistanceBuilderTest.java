@@ -3,15 +3,14 @@ package com.lswebworld.datatypes;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.math.BigDecimal;
-import org.hl7.fhir.r4.model.Age;
+import org.hl7.fhir.r4.model.Distance;
 import org.hl7.fhir.r4.model.Quantity.QuantityComparator;
 import org.junit.jupiter.api.Test;
 
-class AgeBuilderTest {
-  
+class DistanceBuilderTest {
   @Test
   void testWithValue() {
-    Age quantity = new AgeBuilder()
+    Distance quantity = new DistanceBuilder()
         .withValue(25.5)
         .build();
     assertThat(quantity.getValue())
@@ -26,7 +25,7 @@ class AgeBuilderTest {
 
   @Test
   void testWithComparator() {
-    Age quantity = new AgeBuilder()
+    Distance quantity = new DistanceBuilder()
         .withComparator(QuantityComparator.GREATER_THAN)
         .build();
     assertThat(quantity.getComparator())
@@ -36,7 +35,7 @@ class AgeBuilderTest {
 
   @Test
   void testWithUnit() {
-    Age quantity = new AgeBuilder()
+    Distance quantity = new DistanceBuilder()
         .withUnit("ml")
         .build();
     assertThat(quantity.getUnit())
@@ -46,7 +45,7 @@ class AgeBuilderTest {
 
   @Test
   void testWithSystem() {
-    Age quantity = new AgeBuilder()
+    Distance quantity = new DistanceBuilder()
         .withSystem("http://unitsofmeasure.org")
         .build();
     assertThat(quantity.getSystem())
@@ -56,7 +55,7 @@ class AgeBuilderTest {
 
   @Test
   void testWithCode() {
-    Age quantity = new AgeBuilder()
+    Distance quantity = new DistanceBuilder()
         .withCode("ml")
         .build();
     assertThat(quantity.getCode())
