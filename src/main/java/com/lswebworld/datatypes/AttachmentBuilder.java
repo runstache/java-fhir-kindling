@@ -7,7 +7,7 @@ import org.hl7.fhir.r4.model.Attachment;
 
 public class AttachmentBuilder extends AbstractElementBuilder<Attachment, AttachmentBuilder> {
 
-  private Attachment attachment;
+  private final Attachment attachment;
 
   /**
    * Constructor.

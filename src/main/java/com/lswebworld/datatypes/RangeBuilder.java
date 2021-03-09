@@ -5,7 +5,7 @@ import org.hl7.fhir.r4.model.SimpleQuantity;
 
 public class RangeBuilder extends AbstractElementBuilder<Range, RangeBuilder> {
 
-  private Range range;
+  private final Range range;
 
   /**
    * Constructor.

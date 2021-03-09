@@ -4,7 +4,7 @@ import org.hl7.fhir.r4.model.Money;
 
 public class MoneyBuilder extends AbstractElementBuilder<Money, MoneyBuilder> {
 
-  private Money money;
+  private final Money money;
 
   /**
    * Constructor.

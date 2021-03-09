@@ -4,7 +4,7 @@ import org.hl7.fhir.r4.model.Coding;
 
 public class CodingBuilder extends AbstractElementBuilder<Coding, CodingBuilder> {
 
-  private Coding coding;
+  private final Coding coding;
 
   /**
    * Constructor.

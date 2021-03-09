@@ -7,7 +7,7 @@ import org.hl7.fhir.r4.model.Period;
 
 public class ContactPointBuilder extends AbstractElementBuilder<ContactPoint, ContactPointBuilder> {
 
-  private ContactPoint contactPoint;
+  private final ContactPoint contactPoint;
 
   /**
    * Constructor.

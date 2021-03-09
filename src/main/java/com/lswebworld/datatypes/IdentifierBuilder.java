@@ -8,7 +8,7 @@ import org.hl7.fhir.r4.model.Reference;
 
 public class IdentifierBuilder extends AbstractElementBuilder<Identifier, IdentifierBuilder> {
 
-  private Identifier identifier;
+  private final Identifier identifier;
 
   /**
    * Constructor.

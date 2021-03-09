@@ -7,7 +7,7 @@ import org.hl7.fhir.r4.model.Period;
 
 public class AddressBuilder extends AbstractElementBuilder<Address, AddressBuilder> {
   
-  private Address address;
+  private final Address address;
 
   /**
    * Constructor.

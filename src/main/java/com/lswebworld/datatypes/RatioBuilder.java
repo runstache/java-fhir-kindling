@@ -5,7 +5,7 @@ import org.hl7.fhir.r4.model.Ratio;
 
 public class RatioBuilder extends AbstractElementBuilder<Ratio, RatioBuilder> {
 
-  private Ratio ratio;
+  private final Ratio ratio;
 
   /**
    * Constructor.

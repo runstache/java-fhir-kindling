@@ -5,7 +5,7 @@ import org.hl7.fhir.r4.model.SimpleQuantity;
 
 public class SampledDataBuilder extends AbstractElementBuilder<SampledData, SampledDataBuilder> {
 
-  private SampledData sampledData;
+  private final SampledData sampledData;
 
   /**
    * Constructor.

@@ -6,7 +6,7 @@ import org.hl7.fhir.r4.model.Coding;
 public class CodeableConceptBuilder 
     extends AbstractElementBuilder<CodeableConcept, CodeableConceptBuilder> {
 
-  private CodeableConcept concept;
+  private final CodeableConcept concept;
 
   /**
    * Constructor.

@@ -7,7 +7,7 @@ import org.hl7.fhir.r4.model.Period;
 
 public class PeriodBuilder extends AbstractElementBuilder<Period, PeriodBuilder> {
 
-  private Period period;
+  private final Period period;
 
   /**
    * Constructor.

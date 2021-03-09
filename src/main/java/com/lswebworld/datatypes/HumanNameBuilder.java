@@ -5,7 +5,7 @@ import org.hl7.fhir.r4.model.Period;
 
 public class HumanNameBuilder extends AbstractElementBuilder<HumanName, HumanNameBuilder> {
 
-  private HumanName name;
+  private final HumanName name;
 
   /**
    * Constructor.
