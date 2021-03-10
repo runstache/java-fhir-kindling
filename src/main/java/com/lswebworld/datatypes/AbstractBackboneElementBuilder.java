@@ -1,22 +1,25 @@
 package com.lswebworld.datatypes;
 
-import org.hl7.fhir.r4.model.BackboneElement;
+import org.hl7.fhir.r4.model.BackboneType;
 import org.hl7.fhir.r4.model.Extension;
 
 @SuppressWarnings("unchecked")
-public class AbstractBackboneElementBuilder<T extends BackboneElement, U>
+public class AbstractBackboneElementBuilder<T extends BackboneType, U>
     extends AbstractElementBuilder<T, U> {
 
-  private final T element;
+  private T element;
 
   /**
    * Constructor.
-   * @param backboneElement Back Bone Element
    */
-  protected AbstractBackboneElementBuilder(T backboneElement) {
+  protected AbstractBackboneElementBuilder() {
     super();
-    element = backboneElement;
-    super.initialize(backboneElement);
+  }
+
+  @Override
+  protected void initialize(T element) {
+    this.element = element;
+    super.initialize(element);
   }
 
   /**
