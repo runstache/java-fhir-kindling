@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 class NarrativeBuilderTest {
 
   @Test
-  void withId() {
+  void testWithId() {
     Narrative narrative = new NarrativeBuilder()
         .withId("MyId")
         .build();
@@ -21,7 +21,7 @@ class NarrativeBuilderTest {
   }
 
   @Test
-  void addExtension() {
+  void testAddExtension() {
     Extension extension = new Extension("http://www.myextension.com");
     extension.setValue(new StringType("MyValue"));
 
@@ -39,7 +39,7 @@ class NarrativeBuilderTest {
   }
 
   @Test
-  void withStatus() {
+  void testWithStatus() {
     Narrative narrative = new NarrativeBuilder()
         .withStatus(Narrative.NarrativeStatus.GENERATED)
         .build();
@@ -49,7 +49,7 @@ class NarrativeBuilderTest {
   }
 
   @Test
-  void withDiv() {
+  void testWithDiv() {
     XhtmlNode node = new XhtmlNode();
     node.setValue("<div>My Value</div>");
 
@@ -63,7 +63,7 @@ class NarrativeBuilderTest {
   }
 
   @Test
-  void withDivString() {
+  void testWithDivString() {
     Narrative narrative = new NarrativeBuilder()
         .withDiv("<div>My Value</div>")
         .build();

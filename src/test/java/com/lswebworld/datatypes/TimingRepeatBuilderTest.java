@@ -16,7 +16,7 @@ import org.junit.jupiter.api.Test;
 class TimingRepeatBuilderTest {
 
   @Test
-  void withId() {
+  void testWithId() {
     Timing.TimingRepeatComponent component = new TimingRepeatBuilder()
         .withId("MyId")
         .build();
@@ -26,7 +26,7 @@ class TimingRepeatBuilderTest {
   }
 
   @Test
-  void addExtension() {
+  void testAddExtension() {
     Extension extension = new Extension("http://myextension.org");
     extension.setValue(new StringType("MyStringValue"));
 
@@ -97,7 +97,7 @@ class TimingRepeatBuilderTest {
   }
 
   @Test
-  void withCount() {
+  void testWithCount() {
     Timing.TimingRepeatComponent component = new TimingRepeatBuilder()
         .withCount(10)
         .build();
@@ -107,7 +107,7 @@ class TimingRepeatBuilderTest {
   }
 
   @Test
-  void withCountMax() {
+  void testWithCountMax() {
     Timing.TimingRepeatComponent component = new TimingRepeatBuilder()
         .withCountMax(15)
         .build();
@@ -117,7 +117,7 @@ class TimingRepeatBuilderTest {
   }
 
   @Test
-  void withDuration() {
+  void testWithDuration() {
     Timing.TimingRepeatComponent component = new TimingRepeatBuilder()
         .withDuration(15.5)
         .build();
@@ -129,7 +129,7 @@ class TimingRepeatBuilderTest {
   }
 
   @Test
-  void withDurationMax() {
+  void testWithDurationMax() {
     Timing.TimingRepeatComponent component = new TimingRepeatBuilder()
         .withDurationMax(20.5)
         .build();
@@ -141,7 +141,7 @@ class TimingRepeatBuilderTest {
   }
 
   @Test
-  void withDurationUnit() {
+  void testWithDurationUnit() {
     Timing.TimingRepeatComponent component = new TimingRepeatBuilder()
         .withDurationUnit(Timing.UnitsOfTime.D)
         .build();
@@ -151,7 +151,7 @@ class TimingRepeatBuilderTest {
   }
 
   @Test
-  void withFrequency() {
+  void testWithFrequency() {
     Timing.TimingRepeatComponent component = new TimingRepeatBuilder()
         .withFrequency(50)
         .build();
@@ -161,7 +161,7 @@ class TimingRepeatBuilderTest {
   }
 
   @Test
-  void withFrequencyMax() {
+  void testWithFrequencyMax() {
     Timing.TimingRepeatComponent component = new TimingRepeatBuilder()
         .withFrequencyMax(75)
         .build();
@@ -171,7 +171,7 @@ class TimingRepeatBuilderTest {
   }
 
   @Test
-  void withPeriod() {
+  void testWithPeriod() {
     Timing.TimingRepeatComponent component = new TimingRepeatBuilder()
         .withPeriod(22.3)
         .build();
@@ -183,7 +183,7 @@ class TimingRepeatBuilderTest {
   }
 
   @Test
-  void withPeriodMax() {
+  void testWithPeriodMax() {
     Timing.TimingRepeatComponent component = new TimingRepeatBuilder()
         .withPeriodMax(35.2)
         .build();
@@ -195,7 +195,7 @@ class TimingRepeatBuilderTest {
   }
 
   @Test
-  void withPeriodUnit() {
+  void testWithPeriodUnit() {
     Timing.TimingRepeatComponent component = new TimingRepeatBuilder()
         .withPeriodUnit(Timing.UnitsOfTime.H)
         .build();
@@ -205,7 +205,7 @@ class TimingRepeatBuilderTest {
   }
 
   @Test
-  void addDayOfWeek() {
+  void testAddDayOfWeek() {
     Timing.TimingRepeatComponent component = new TimingRepeatBuilder()
         .addDayOfWeek(Timing.DayOfWeek.MON)
         .build();
@@ -216,7 +216,7 @@ class TimingRepeatBuilderTest {
   }
 
   @Test
-  void addTimeOfDay() {
+  void testAddTimeOfDay() {
     Timing.TimingRepeatComponent component = new TimingRepeatBuilder()
         .addTimeOfDay("12:30:00")
         .build();
@@ -227,7 +227,7 @@ class TimingRepeatBuilderTest {
   }
 
   @Test
-  void addWhen() {
+  void testAddWhen() {
     Timing.TimingRepeatComponent component = new TimingRepeatBuilder()
         .addWhen(Timing.EventTiming.ACD)
         .build();
@@ -238,7 +238,7 @@ class TimingRepeatBuilderTest {
   }
 
   @Test
-  void withOffset() {
+  void testWithOffset() {
     Timing.TimingRepeatComponent component = new TimingRepeatBuilder()
         .withOffset(6)
         .build();

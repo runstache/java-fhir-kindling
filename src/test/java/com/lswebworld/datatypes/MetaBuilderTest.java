@@ -14,7 +14,7 @@ import org.junit.jupiter.api.Test;
 class MetaBuilderTest {
 
   @Test
-  void withId() {
+  void testWithId() {
     Meta meta = new MetaBuilder()
         .withId("MyId")
         .build();
@@ -24,7 +24,7 @@ class MetaBuilderTest {
   }
 
   @Test
-  void addExtension() {
+  void testAddExtension() {
     Extension extension = new Extension("http://www.myextension.com");
     extension.setValue(new StringType("MyValue"));
 
@@ -42,7 +42,7 @@ class MetaBuilderTest {
   }
 
   @Test
-  void withVersionId() {
+  void testWithVersionId() {
     Meta meta = new MetaBuilder()
         .withVersionId("v2.0")
         .build();
@@ -72,7 +72,7 @@ class MetaBuilderTest {
   }
 
   @Test
-  void withSource() {
+  void testWithSource() {
     Meta meta = new MetaBuilder()
         .withSource("http://www.google.com")
         .build();
@@ -82,7 +82,7 @@ class MetaBuilderTest {
   }
 
   @Test
-  void addProfile() {
+  void testAddProfile() {
     Meta meta = new MetaBuilder()
         .addProfile("/StructureDefinition/Patient-1234")
         .build();
@@ -93,7 +93,7 @@ class MetaBuilderTest {
   }
 
   @Test
-  void addSecurity() {
+  void testAddSecurity() {
     Meta meta = new MetaBuilder()
         .addSecurity(new Coding("SECURITY.CODE.OID","SECURITY_CODE","ITS SECURITY"))
         .build();
@@ -106,7 +106,7 @@ class MetaBuilderTest {
   }
 
   @Test
-  void addTag() {
+  void testAddTag() {
     Meta meta = new MetaBuilder()
         .addTag(new Coding("MY.TAG.OID", "TAG", "TAG NAME"))
         .build();
