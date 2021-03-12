@@ -15,7 +15,7 @@ import org.junit.jupiter.api.Test;
 class TimingBuilderTest {
 
   @Test
-  void addModifierExtension() {
+  void testAddModifierExtension() {
     Extension extension = new Extension("http://myextension.org");
     extension.setValue(new StringType("MyStringValue"));
 
@@ -36,7 +36,7 @@ class TimingBuilderTest {
   }
 
   @Test
-  void withId() {
+  void testWithId() {
     Timing timing = new TimingBuilder()
         .withId("MyId")
         .build();
@@ -46,7 +46,7 @@ class TimingBuilderTest {
   }
 
   @Test
-  void addExtension() {
+  void testAddExtension() {
     Extension extension = new Extension("http://myextension.org");
     extension.setValue(new StringType("MyStringValue"));
 
@@ -89,7 +89,7 @@ class TimingBuilderTest {
   }
 
   @Test
-  void withRepeat() {
+  void testWithRepeat() {
     Timing.TimingRepeatComponent component = new Timing.TimingRepeatComponent();
     component.setCount(25);
 
@@ -103,7 +103,7 @@ class TimingBuilderTest {
   }
 
   @Test
-  void withCode() {
+  void testWithCode() {
     CodeableConcept concept = new CodeableConcept();
     concept.addCoding(new Coding("TEST.CODE.OID", "MYCODE", "My Code Display"));
 
