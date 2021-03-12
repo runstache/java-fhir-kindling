@@ -5,7 +5,7 @@ import org.hl7.fhir.utilities.xhtml.XhtmlNode;
 
 public class NarrativeBuilder extends AbstractElementBuilder<Narrative, NarrativeBuilder> {
 
-  private Narrative narrative;
+  private final Narrative narrative;
 
   /**
    * Constructor.
