@@ -9,7 +9,7 @@ import org.hl7.fhir.r4.model.SimpleQuantity;
 public class DoseAndRateBuilder
     extends AbstractElementBuilder<Dosage.DosageDoseAndRateComponent, DoseAndRateBuilder> {
 
-  private Dosage.DosageDoseAndRateComponent component;
+  private final Dosage.DosageDoseAndRateComponent component;
 
   /**
    * Constructor.
