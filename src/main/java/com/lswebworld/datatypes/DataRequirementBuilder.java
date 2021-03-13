@@ -83,11 +83,11 @@ public class DataRequirementBuilder
   }
 
   /**
-   * Adds a Data Requirement DataFilter to the Data Requirement.
+   * Adds a Data Requirement DateFilter to the Data Requirement.
    * @param dataFilter Data Filter Component
    * @return DataRequirementBuilder
    */
-  public DataRequirementBuilder addDataFilter(DataRequirementDateFilterComponent dataFilter) {
+  public DataRequirementBuilder addDateFilter(DataRequirementDateFilterComponent dataFilter) {
     requirement.addDateFilter(dataFilter);
     return this;
   }

@@ -124,7 +124,7 @@ class DataRequirementBuilderTest {
     DataRequirementDateFilterComponent component = new DataRequirementDateFilterComponent();
     component.setPath("Patient/Name");
     DataRequirement requirement = new DataRequirementBuilder()
-        .addDataFilter(component)
+        .addDateFilter(component)
         .build();
     assertThat(requirement.getDateFilter())
         .as("Data Filter should be populated")
