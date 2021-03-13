@@ -1,7 +1,8 @@
-package com.lswebworld.datatypes;
+package com.lswebworld.components.datatypes;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import com.lswebworld.components.datatypes.DoseAndRateBuilder;
 import java.math.BigDecimal;
 import org.hl7.fhir.r4.model.CodeableConcept;
 import org.hl7.fhir.r4.model.Coding;

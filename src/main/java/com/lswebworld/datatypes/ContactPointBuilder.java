@@ -1,5 +1,6 @@
 package com.lswebworld.datatypes;
 
+import com.lswebworld.base.AbstractElementBuilder;
 import org.hl7.fhir.r4.model.ContactPoint;
 import org.hl7.fhir.r4.model.ContactPoint.ContactPointSystem;
 import org.hl7.fhir.r4.model.ContactPoint.ContactPointUse;

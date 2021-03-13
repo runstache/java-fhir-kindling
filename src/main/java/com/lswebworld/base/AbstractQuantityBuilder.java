@@ -1,4 +1,4 @@
-package com.lswebworld.datatypes;
+package com.lswebworld.base;
 
 import org.hl7.fhir.r4.model.Quantity;
 import org.hl7.fhir.r4.model.Quantity.QuantityComparator;

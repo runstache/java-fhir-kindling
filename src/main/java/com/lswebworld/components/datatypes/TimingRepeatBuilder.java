@@ -1,5 +1,6 @@
-package com.lswebworld.datatypes;
+package com.lswebworld.components.datatypes;
 
+import com.lswebworld.base.AbstractElementBuilder;
 import org.hl7.fhir.r4.model.Duration;
 import org.hl7.fhir.r4.model.Period;
 import org.hl7.fhir.r4.model.Range;
