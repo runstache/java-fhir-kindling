@@ -1,5 +1,6 @@
-package com.lswebworld.datatypes;
+package com.lswebworld.components.datatypes;
 
+import com.lswebworld.base.AbstractElementBuilder;
 import org.hl7.fhir.r4.model.CodeableConcept;
 import org.hl7.fhir.r4.model.Dosage;
 import org.hl7.fhir.r4.model.Range;

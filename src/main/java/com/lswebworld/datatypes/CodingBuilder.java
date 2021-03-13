@@ -1,5 +1,6 @@
 package com.lswebworld.datatypes;
 
+import com.lswebworld.base.AbstractElementBuilder;
 import org.hl7.fhir.r4.model.Coding;
 
 public class CodingBuilder extends AbstractElementBuilder<Coding, CodingBuilder> {

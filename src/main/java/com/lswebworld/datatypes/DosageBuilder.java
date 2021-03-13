@@ -1,5 +1,6 @@
 package com.lswebworld.datatypes;
 
+import com.lswebworld.base.AbstractBackboneElementBuilder;
 import org.hl7.fhir.r4.model.BooleanType;
 import org.hl7.fhir.r4.model.CodeableConcept;
 import org.hl7.fhir.r4.model.Dosage;

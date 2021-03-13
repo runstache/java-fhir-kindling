@@ -1,5 +1,6 @@
 package com.lswebworld.datatypes;
 
+import com.lswebworld.base.AbstractElementBuilder;
 import org.hl7.fhir.r4.model.Narrative;
 import org.hl7.fhir.utilities.xhtml.XhtmlNode;
 
